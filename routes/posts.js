@@ -8,7 +8,7 @@ const verifyToken = require('./verifyToken')
 
 
 
-router.post('/create',verifyToken,async(req,res)=>{
+router.post('/create',async(req,res)=>{
     try {
         const newPost= new Post(req.body)
         const savedPost=await newPost.save()
